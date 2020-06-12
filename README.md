@@ -1,6 +1,11 @@
 # M300-Services Moduldokumentation
+## **LB2**
+### **Ziel**
+Das Ziel ist es ein Webserver mit Vagrant zu realisieren. Dieser soll zusätzlich mit diversen Sicherheitsaspekten geschützt werden. 
 
-# VagrantVM
+### **VagrantVM**
+
+Die VagrantBox ist ein normales Ubuntu Xenial64 aus dem Vagrant-Repository. Die Box wird das mit dem Vagrantfile angepasst, was wir auch benötigen um den Webserver zu installieren und Konfigurieren. 
 
 Code Vagrantfile:
 
