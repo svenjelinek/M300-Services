@@ -30,7 +30,7 @@ end
 
 ### **Netzplan**
 
-![Netzplan](../M300-Services/Screenshots/Netzplan.png)
+![Netzplan](./Screenshots/Netzplan.png)
 
 ### **Testing**
 
@@ -38,6 +38,6 @@ end
 Als erstes testen wir ob die Webseite überhaupt aufrufbar ist. Dafür geben wir folgendes im Webbrowser ein: "127.0.0.1:8080". Da wir noch nichts am Index.html geändert haben, sollte nun die Apache-Standardseite angezeigt werden. 
 
 **Testergebnis: OK**
-![Webseite](../M300-Services/Screenshots/Webseite.png)
+![Webseite](./Screenshots/Webseite.png)
 
 #### Log
