@@ -38,6 +38,12 @@ end
 Als erstes testen wir ob die Webseite überhaupt aufrufbar ist. Dafür geben wir folgendes im Webbrowser ein: "127.0.0.1:8080". Da wir noch nichts am Index.html geändert haben, sollte nun die Apache-Standardseite angezeigt werden. 
 
 **Testergebnis: OK**
+
 ![Webseite](./Screenshots/Webseite.PNG)
 
 #### Log
+Wir wollen das jede Anfrage an den Webserver geloggt wird. Dafür rufen wir den Log zweimal auf und machen dazwischen einigen Requests auf den Webserver. Auch diese Anfragen sollen im Log angelegt sein.
+
+**Testergebnis: OK**
+
+![Webseite](./Screenshots/Accesslog.PNG)
