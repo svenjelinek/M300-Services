@@ -6,8 +6,9 @@ config.vm.provider "virtualbox" do |vb|
   vb.memory = "512"  
 end
 config.vm.provision "shell", inline: <<-SHELL
-  # .Packages vom lokalen Server holen
-  # .sudo sed -i -e"1i deb {{config.server}}/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial main restricted" /etc/apt/sources.list 
+  # Packages vom lokalen Server holen
+  # sudo sed -i -e"1i deb {{config.server}}/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial main restricted" /etc/apt/sources.list 
   sudo apt-get update
   sudo apt-get -y install apache2 
 SHELL
+end
