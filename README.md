@@ -5,7 +5,10 @@ Das Ziel ist es ein Webserver mit Vagrant zu realisieren. Dieser soll zusätzlic
 
 ### **VagrantVM**
 
-Die VagrantBox ist ein normales Ubuntu Xenial64 aus dem Vagrant-Repository. Die Box wird das mit dem Vagrantfile angepasst, was wir auch benötigen um den Webserver zu installieren und Konfigurieren. 
+Die VagrantBox ist ein normales Ubuntu Xenial64 aus dem Vagrant-Repository. Die Box wird das mit dem Vagrantfile angepasst, was wir auch benötigen um den Webserver zu installieren und Konfigurieren. Die folgenden Zeilen sind für den Webserver besondern wichtig:
+
+* config.vm.network "forwarded_port", guest:80, host:8080 = Webseite auf Port 8080 verfügbar
+* config.vm.synced_folder ".", "/var/www/html" = Erlaubt es uns die ganze Webseite direkt auf dem Localhost zu bearbeiten. Alle Änderungen werden direkt auf den Webserver synchronisiert. 
 
 Code Vagrantfile:
 
@@ -25,3 +28,16 @@ SHELL
 end
 ```
 
+### **Netzplan**
+
+![Netzplan](./Screenshots/Netzplan.png)
+
+### **Testing**
+
+#### Verfügbarkeit Webseite
+Als erstes testen wir ob die Webseite überhaupt aufrufbar ist. Dafür geben wir folgendes im Webbrowser ein: "127.0.0.1:8080". Da wir noch nichts am Index.html geändert haben, sollte nun die Apache-Standardseite angezeigt werden. 
+
+**Testergebnis: OK**
+![Webseite](./Screenshots/Webseite.png)
+
+#### Log
